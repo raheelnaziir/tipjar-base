@@ -28,10 +28,10 @@ import { useAccount } from 'wagmi'
 const Providers = dynamic(() => import('./providers').then(m => m.default))
 
 const AMOUNTS = [
-  { label: '☕ Coffee', value: '0.001' },
-  { label: '🍕 Pizza', value: '0.005' },
-  { label: '🎉 Celebrate', value: '0.01' },
-  { label: '🚀 Big love', value: '0.05' },
+  { label: ' Coffee', value: '0.001' },
+  { label: ' Pizza', value: '0.005' },
+  { label: ' Celebrate', value: '0.01' },
+  { label: ' Big love', value: '0.05' },
 ]
 
 function JarSVG() {
@@ -152,7 +152,7 @@ function TipModal({ onClose }: { onClose: () => void }) {
             Note <span style={{ fontWeight: 400, textTransform: 'none' }}>(optional)</span>
           </label>
           <input
-            type="text" placeholder="Thanks for your awesome work! 🙌"
+            type="text" placeholder="Thanks for your awesome work!"
             value={note} onChange={e => setNote(e.target.value)} maxLength={100}
             style={{
               width: '100%', padding: '11px 14px', borderRadius: '10px', boxSizing: 'border-box',
@@ -204,12 +204,10 @@ function TipJarApp() {
         borderBottom: '1px solid #f1f5f9',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <div style={{
-            width: '32px', height: '32px', borderRadius: '50%',
-            background: '#0052FF', display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}>
-            <span style={{ color: 'white', fontSize: '16px' }}>⬟</span>
-          </div>
+          <svg width="32" height="32" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="55.5" cy="55.5" r="55.5" fill="#0052FF" />
+            <path d="M55.7 78.3C68.3 78.3 78.5 68.1 78.5 55.5C78.5 42.9 68.3 32.7 55.7 32.7C43.7 32.7 33.9 41.9 32.9 53.7H63.1V57.3H32.9C33.9 69.1 43.7 78.3 55.7 78.3Z" fill="white" />
+          </svg>
           <span style={{ fontWeight: '600', fontSize: '15px', color: '#0f172a' }}>Base Tip Jar</span>
         </div>
         <Wallet>
@@ -240,7 +238,11 @@ function TipJarApp() {
           background: '#e8f0ff', borderRadius: '20px', padding: '5px 14px',
           fontSize: '12px', color: '#0052FF', fontWeight: '500', marginBottom: '20px',
         }}>
-          <span>⬟</span> Built on Base
+          <svg width="14" height="14" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="55.5" cy="55.5" r="55.5" fill="#0052FF" />
+            <path d="M55.7 78.3C68.3 78.3 78.5 68.1 78.5 55.5C78.5 42.9 68.3 32.7 55.7 32.7C43.7 32.7 33.9 41.9 32.9 53.7H63.1V57.3H32.9C33.9 69.1 43.7 78.3 55.7 78.3Z" fill="white" />
+          </svg>
+          Built on Base
         </div>
 
         {/* Title */}
@@ -273,7 +275,7 @@ function TipJarApp() {
           onMouseOver={e => (e.currentTarget.style.opacity = '0.85')}
           onMouseOut={e => (e.currentTarget.style.opacity = '1')}
         >
-          ✈️ Send a Tip
+          Send a Tip
         </button>
 
         <p style={{ color: '#94a3b8', fontSize: '13px', margin: 0 }}>

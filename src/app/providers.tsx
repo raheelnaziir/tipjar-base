@@ -2,6 +2,7 @@
 
 import { OnchainKitProvider } from '@coinbase/onchainkit'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { TransactionNotFoundError } from 'viem'
 import { baseSepolia } from 'viem/chains'
 import { WagmiProvider, createConfig, http } from 'wagmi'
 import { coinbaseWallet, metaMask, injected, walletConnect } from 'wagmi/connectors'

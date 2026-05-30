@@ -104,7 +104,7 @@ function TipModal({ onClose }: { onClose: () => void }) {
           </label>
           <input
             type="text"
-            placeholder="0x... or name.base.eth"
+            placeholder="0x..."
             value={recipient}
             onChange={e => setRecipient(e.target.value)}
             style={{

@@ -7,8 +7,22 @@ const geist = Geist({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Tip Jar - Send ETH on BASE',
   description: 'Send ETH tips to anyone on BASE',
-  icons: {
-    icon: '/favicon.PNG',
+  icons: { icon: '/favicon.PNG' },
+  other: {
+    'fc:frame': JSON.stringify({
+      version: '1',
+      imageUrl: 'https://tipjar-base.vercel.app/favicon.PNG',
+      button: {
+        title: 'Send a Tip',
+        action: {
+          type: 'launch_frame',
+          name: 'Base Tip Jar',
+          url: 'https://tipjar-base.vercel.app',
+          splashImageUrl: 'https://tipjar-base.vercel.app/favicon.PNG',
+          splashBackgroundColor: '#ffffff',
+        },
+      },
+    }),
   },
 }
 

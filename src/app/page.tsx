@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { parseEther, isAddress } from 'viem'
@@ -189,6 +190,14 @@ function TipModal({ onClose }: { onClose: () => void }) {
 
 function TipJarApp() {
   const [showModal, setShowModal] = useState(false)
+
+  useEffect(() => {
+    const initSDK = async () => {
+      const sdk = (await import('@farcaster/miniapp-sdk')).default
+      await sdk.actions.ready()
+    }
+    initSDK()
+  }, [])
 
   return (
     <div style={{

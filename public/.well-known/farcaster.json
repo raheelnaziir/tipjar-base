@@ -1,0 +1,17 @@
+{
+    "accountAssociation": {
+        "header": "",
+        "payload": "",
+        "signature": ""
+    },
+    "frame": {
+        "version": "1",
+        "name": "Base Tip Jar",
+        "iconUrl": "https://tipjar-base.vercel.app/favicon.PNG",
+        "homeUrl": "https://tipjar-base.vercel.app",
+        "imageUrl": "https://tipjar-base.vercel.app/favicon.PNG",
+        "buttonTitle": "Send a Tip",
+        "splashImageUrl": "https://tipjar-base.vercel.app/favicon.PNG",
+        "splashBackgroundColor": "#ffffff"
+    }
+}

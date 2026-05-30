@@ -5,8 +5,8 @@ import './globals.css'
 const geist = Geist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Tip Jar — Send ETH on Base',
-  description: 'Send ETH tips to anyone on Base',
+  title: 'Tip Jar - Send ETH on BASE',
+  description: 'Send ETH tips to anyone on BASE',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

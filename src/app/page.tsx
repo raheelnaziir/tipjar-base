@@ -169,7 +169,7 @@ function TipModal({ onClose }: { onClose: () => void }) {
           <Transaction chainId={baseSepolia.id} calls={calls}>
             <div style={{ borderRadius: '10px', overflow: 'hidden', opacity: isValid ? 1 : 0.5 }}>
               <TransactionButton
-                text={isValid ? `Send ${amount} ETH ✈️` : 'Enter a recipient first'}
+                text={isValid ? `Send ${amount} ETH ` : 'Enter a recipient first'}
                 disabled={!isValid}
                 className="w-full"
               />

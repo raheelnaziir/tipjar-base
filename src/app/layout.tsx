@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: 'Send ETH tips to anyone on BASE',
   icons: { icon: '/favicon.PNG' },
   other: {
+    'base:app_id': '6a1b24ab0404c6213202498d',
     'fc:frame': JSON.stringify({
       version: '1',
       imageUrl: 'https://tipjar-base.vercel.app/favicon.PNG',

@@ -3,14 +3,14 @@
 import { OnchainKitProvider } from '@coinbase/onchainkit'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { TransactionNotFoundError } from 'viem'
-import { baseSepolia } from 'viem/chains'
+import { base } from 'viem/chains'
 import { WagmiProvider, createConfig, http } from 'wagmi'
 import { coinbaseWallet, metaMask, injected, walletConnect } from 'wagmi/connectors'
 
 const queryClient = new QueryClient()
 
 const config = createConfig({
-    chains: [baseSepolia],
+    chains: [base],
     connectors: [
         coinbaseWallet({ appName: 'Base Tip Jar' }),
         metaMask(),
@@ -20,7 +20,7 @@ const config = createConfig({
         }),
     ],
     transports: {
-        [baseSepolia.id]: http(),
+        [base.id]: http(),
     },
 })
 
@@ -30,7 +30,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
             <QueryClientProvider client={queryClient}>
                 <OnchainKitProvider
                     apiKey={process.env.NEXT_PUBLIC_ONCHAINKIT_API_KEY}
-                    chain={baseSepolia}
+                    chain={base}
                     config={{
                         appearance: {
                             mode: 'light',

@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { parseEther, isAddress } from 'viem'
-import { baseSepolia } from 'viem/chains'
+import { base } from 'viem/chains'
 import {
   Transaction,
   TransactionButton,
@@ -166,7 +166,7 @@ function TipModal({ onClose }: { onClose: () => void }) {
             Connect your wallet to send a tip
           </div>
         ) : (
-          <Transaction chainId={baseSepolia.id} calls={calls}>
+          <Transaction chainId={base.id} calls={calls}>
             <div style={{ borderRadius: '10px', overflow: 'hidden', opacity: isValid ? 1 : 0.5 }}>
               <TransactionButton
                 text={isValid ? `Send ${amount} ETH ` : 'Enter a recipient first'}
